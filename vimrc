@@ -1,21 +1,16 @@
 "vim configuration file
 set relativenumber 
 set number
-
 "set tap spaces
-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-
 "Pathogen init
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-
 "NERDTree configuration
 "
-autocmd vimenter * NERDTree
 " map keys Ctrl-n to toogle NERDtree
 map <C-n> :NERDTreeToggle<CR>
 " close vim if only one remaining file is open
