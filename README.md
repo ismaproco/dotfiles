@@ -1,4 +1,4 @@
-My repository to keep a version control of my dotfiles
+#Repository to keep a version control of my dotfiles
 
-- vimrc: My VIM's configuration file
-- Added relative numbers and NERDTree configuration
+- vimrc: VIM's configuration file
+- gitignore: common files and directories to ignore in git
