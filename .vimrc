@@ -1,19 +1,26 @@
-"vim configuration file
-set relativenumber 
-set number
-"set tap spaces
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-"Pathogen init
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+if empty(glob('~/.vim/autoload/pathogen.vim'))
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+endif
+
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
-"NERDTree configuration
-"
-" map keys Ctrl-n to toogle NERDtree
-map <C-n> :NERDTreeToggle<CR>
-" close vim if only one remaining file is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | wq | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q! | endif
+
+call plug#begin()
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
+
+set number
+set numberwidth=2
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
