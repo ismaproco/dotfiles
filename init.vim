@@ -1,3 +1,5 @@
+""""" ensure this file is located as ~/.config/nvim/init.vim
+"""
 """"" vimplug must be installed before executing this commands
 "" this is the curl for neovim
 "" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
